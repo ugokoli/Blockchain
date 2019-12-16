@@ -13,7 +13,7 @@ fn main() {
         blocks: vec![block],
     };
 
-    println!("Verify: {}", &blockchain.verify());
+    println!("Verify: {}", &blockchain.update_with_block());
 
     // Attempt to mine 10 more blocks
     for i in 1..=10 {
@@ -26,6 +26,6 @@ fn main() {
 
         blockchain.blocks.push(block);
 
-        println!("Verify: {}", &blockchain.verify())
+        println!("Verify: {}", &blockchain.update_with_block())
     }
 }
